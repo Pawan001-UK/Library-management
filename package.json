@@ -1,0 +1,42 @@
+{
+  "name": "library-management",
+  "version": "1.0.0",
+  "description": "AI-Powered Library Management System (Vite + React with mock backend)",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server.js",
+    "server:dev": "nodemon server.js",
+    "seed": "node seedData.js",
+    "client": "vite",
+    "backend": "node server.js",
+    "dev:full": "concurrently -n API,WEB -c green,blue \"npm:server:dev\" \"npm:dev\"",
+    "start": "concurrently -n API,WEB -c green,blue \"npm:server\" \"npm:dev\""
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.468.0",
+    "mongodb-memory-server": "^10.1.4",
+    "mongoose": "^8.8.1",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "speakeasy": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.14.0",
+    "nodemon": "^3.0.1",
+    "vite": "^5.4.8"
+  }
+}
